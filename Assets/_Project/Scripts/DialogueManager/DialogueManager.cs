@@ -33,6 +33,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (!_dialogueActive) return;
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SkipDialogue();
+            return;
+        }
+
         if (HasCurrentLineFinished())
         {
             NextLine();
@@ -63,5 +69,11 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         ShowCurrentLine();
+    }
+    private void SkipDialogue()
+    {
+        _currentLineIndex = _dialogueTexts.Length;
+        _dialogueActive = false;
+        _onDialogueEnd.Invoke();
     }
 }
