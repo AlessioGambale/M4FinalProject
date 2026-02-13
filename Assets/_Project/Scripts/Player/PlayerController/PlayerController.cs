@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         _rb.velocity = new Vector3(velocity.x, _rb.velocity.y, velocity.z);
     }
 
-    private void ResetMoveAndRotate()
+    public void ResetMoveAndRotate()
     {
         _rb.velocity = new Vector3(0, _rb.velocity.y, 0);
         _rb.angularVelocity = Vector3.zero;

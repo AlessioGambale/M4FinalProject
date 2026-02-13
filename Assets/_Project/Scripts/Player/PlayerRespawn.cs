@@ -6,6 +6,7 @@ public class PlayerRespawn : MonoBehaviour
     [Header("Events")]
     [SerializeField] private UnityEvent<int> _onLifeLost;
     [SerializeField] private UnityEvent _onLivesEnded;
+    [SerializeField] private PlayerController _playerController;
 
     [Header("Lives Settings")]
     [SerializeField] private int _maxLives;
@@ -35,5 +36,6 @@ public class PlayerRespawn : MonoBehaviour
         }
         transform.position = _checkPointManager.GetCheckPoint();
         _lifeController.RestoreFullHp();
+        _playerController.ResetMoveAndRotate();
     }
 }
