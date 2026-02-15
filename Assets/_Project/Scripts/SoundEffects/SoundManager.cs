@@ -76,7 +76,7 @@ public class SoundManager : MonoBehaviour
     }
     #endregion
 
-    #region CoinsSounds
+#region CoinsSounds
     public void PlayBasicCoin()
     {
         _sfxSource.PlayOneShot(_basicCoinSound);
@@ -130,6 +130,11 @@ public class SoundManager : MonoBehaviour
     public void PlaySecondDialogue()
     {
         _dialogueSource.PlayOneShot(_secondDialogue);
+    }
+
+    public void StopDialogue()
+    {
+        _dialogueSource.Stop();
     }
 #endregion
 }

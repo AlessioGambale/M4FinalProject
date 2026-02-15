@@ -10,7 +10,6 @@ public class PlayerRespawn : MonoBehaviour
 
     [Header("Lives Settings")]
     [SerializeField] private int _maxLives;
-
     [SerializeField] private CheckPointManager _checkPointManager;
 
     private LifeController _lifeController;

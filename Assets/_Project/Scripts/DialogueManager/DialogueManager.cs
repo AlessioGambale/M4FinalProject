@@ -75,5 +75,6 @@ public class DialogueManager : MonoBehaviour
         _currentLineIndex = _dialogueTexts.Length;
         _dialogueActive = false;
         _onDialogueEnd.Invoke();
+        SoundManager.Instance.StopDialogue();
     }
 }

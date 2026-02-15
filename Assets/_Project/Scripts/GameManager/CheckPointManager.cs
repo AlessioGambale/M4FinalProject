@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class CheckPointManager : MonoBehaviour
 {
-    public static CheckPointManager Instance { get; private set; }
-
     private Vector3 _respawnPoint;
     private bool _hasCheckPoint = false;
 
